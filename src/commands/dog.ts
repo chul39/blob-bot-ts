@@ -1,6 +1,6 @@
 import { EmbedBuilder, SlashCommandBuilder } from 'discord.js';
 import { SlashCommand } from '../types/command';
-import { fetchRequest } from '../../utils/fetch-request';
+import { fetchRequest } from '../utils/fetch-request';
 
 const breedList : string[] = [];
 
@@ -10,10 +10,10 @@ export const DogCommand : SlashCommand = {
     .setName('dog')
     .setDescription('Send dog image')
     .addStringOption(option =>
-	    option
-      .setName('breed')
-	    .setDescription('Breed of dog')
-	  ),
+      option
+        .setName('breed')
+        .setDescription('Breed of dog')
+    ),
 
   execute: async (interaction) => {
 
