@@ -58,4 +58,7 @@ jobs:
           app-name: 'blob-bot-discord-ts'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C7F463ED97E545FBB7BD7C326E3736DD }}
-          package: .
+          package: release.zip
+
+      - name: 'Delete zip file'
+        run: rm release.zip
