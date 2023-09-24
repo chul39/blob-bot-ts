@@ -40,10 +40,10 @@ export const DogCommand : SlashCommand = {
       let url = ''
       if (breed) {
         const params = breedFormatted.split(' ').reverse().join('/')
-        if (breedList.includes(breedFormatted)) url = `https://dog.ceo/api/breed/${params}/images/random`;
+        if (breedList.includes(breedFormatted)) url = `${process.env.DOG_API}${params}/images/random`;
         else return interaction.reply('Unkown breed');
       } else {
-        url = 'https://dog.ceo/api/breeds/image/random';
+        url = `${process.env.DOG_API}/image/random`;
       }
 
       // Get image

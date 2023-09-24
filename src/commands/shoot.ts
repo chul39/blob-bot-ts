@@ -33,7 +33,7 @@ export const ShootCommand : SlashCommand = {
     const embed = new EmbedBuilder()
       .setTitle("Freeze! Don't move!")
       .setDescription(`You are arrested, <@${target.id}>!`)
-	  .setImage('attachment://blob-shoot.png')
+	    .setImage('attachment://blob-shoot.png')
       .setTimestamp();
     interaction.reply({ embeds: [embed], files: [file] });
 

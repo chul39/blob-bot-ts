@@ -20,3 +20,6 @@ commandCollection.set(HugCommand.data.name, HugCommand);
 
 import { ShootCommand } from './shoot';
 commandCollection.set(ShootCommand.data.name, ShootCommand);
+
+import { MinecraftCommand } from './minecraft';
+commandCollection.set(MinecraftCommand.data.name, MinecraftCommand);
